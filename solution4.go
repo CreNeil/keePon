@@ -7,7 +7,7 @@ func romanToInt(s string) int {
 	temp := 0
 	for i := len(s) - 1; i >= 0; i-- {
 		num := getNumber(string(s[i]))
-		if num < temp && (num == 1 || (num == 10) || num == 100) {
+		if num < temp {
 			result -= num
 		} else {
 			result += num
